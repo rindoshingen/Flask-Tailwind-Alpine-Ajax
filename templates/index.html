@@ -1,0 +1,70 @@
+{% include "header.html" %}
+
+<header class="header-wrapper">
+	<div class="logo-wrapper">
+		<a href="/">
+			<svg class="brxe-svg" id="brxe-nlqlne" xmlns="http://www.w3.org/2000/svg" width="42" height="46"
+				viewBox="0 0 52 56" fill="#000000">
+				<path d="M4.25836 18.7819L22.057 27.2396L22.057 40.4728L4.25836 32.0151L4.25836 18.7819Z"
+					stroke-width="2.77637">
+				</path>
+				<rect width="28.0641" height="13.2332"
+					transform="matrix(0.903211 -0.429197 2.67668e-08 1 22.1384 14.0449)" stroke-width="2.77637">
+				</rect>
+				<rect width="28.0641" height="13.2332"
+					transform="matrix(0.903211 -0.429197 2.67668e-08 1 22.1384 40.5115)" stroke-width="2.77637">
+				</rect>
+			</svg>
+		</a>
+	</div>
+	<h1 class="hero-heading"><strong>{{company_name}}:</strong> Code + Simplicity</h1>
+	<p class="hero-description">
+		Innately curious person—passionate about the entanglement between humans and technology, and the
+		ways we interact with the world. Currently crafting interfaces and building websites for a
+		living.
+	</p>
+</header>
+<main id="content">
+	<section class="main-wrapper">
+		<div class="main-inner">
+			<article class="article-wrapper">
+				<div class="interest-wrapper">
+					<h2 class="interest-header"><strong>My</strong> Interests</h2>
+					<a href="{{ url_for('interest') }}" class="interest-item">
+						<h3 class="interest-item__title">Field Notes</h3>
+						<span class="interest-item__headline">Inner Dialogue, Thoughts</span>
+					</a>
+					<a href="{{ url_for('interest') }}" class="interest-item">
+						<h3 class="interest-item__title">Pixel Labs</h3>
+						<span class="interest-item__headline">Experients with pixels & code</span>
+					</a>
+					<a href="{{ url_for('interest') }}" class="interest-item">
+						<h3 class="interest-item__title">Bookshelf</h3>
+						<span class="interest-item__headline">Stuff I am currently reading</span>
+					</a>
+					<a href="{{ url_for('interest') }}" class="interest-item">
+						<h3 class="interest-item__title">Resources</h3>
+						<span class="interest-item__headline">Helpful links for your journey</span>
+					</a>
+				</div>
+				<div class="contact-wrapper">
+					<h2 class="connect-header"><strong>Ways</strong> to Connect</h2>
+					<a href="mailto:info@example.com" class="connect-item" target="_blank">
+						<h3 class="connect-item__title">Email</h3>
+						<span class="connect-item__headline">Drop me a message and say hello</span>
+					</a>
+					<a href="https://instagram.com" class="connect-item" target="blank">
+						<h3 class="connect-item__title">Instagram</h3>
+						<span class="connect-item__headline">Check out some lifestyle randomness</span>
+					</a>
+					<a href="https://x.com" class="connect-item" target="blank">
+						<h3 class="connect-item__title">X/Twitter</h3>
+						<span class="connect-item__headline">Just a place to learn and share</span>
+					</a>
+				</div>
+			</article>
+		</div>
+	</section>
+</main>
+
+{% include "footer.html" %}

@@ -1,0 +1,40 @@
+{% include "header.html" %}
+
+<header class="header-wrapper">
+	<div class="logo-wrapper">
+		<a href="/">
+			<svg class="brxe-svg" id="brxe-nlqlne" xmlns="http://www.w3.org/2000/svg" width="42" height="46"
+				viewBox="0 0 52 56" fill="#000000">
+				<path d="M4.25836 18.7819L22.057 27.2396L22.057 40.4728L4.25836 32.0151L4.25836 18.7819Z"
+					stroke-width="2.77637">
+				</path>
+				<rect width="28.0641" height="13.2332"
+					transform="matrix(0.903211 -0.429197 2.67668e-08 1 22.1384 14.0449)" stroke-width="2.77637">
+				</rect>
+				<rect width="28.0641" height="13.2332"
+					transform="matrix(0.903211 -0.429197 2.67668e-08 1 22.1384 40.5115)" stroke-width="2.77637">
+				</rect>
+			</svg>
+		</a>
+	</div>
+	<a href="{{ url_for('home') }}" class="back-link"><strong>Back</strong> to Index</a>
+</header>
+<main id="content">
+	<section class="main-wrapper">
+		<div class="main-inner">
+			<article class="article-wrapper">
+				{% for article in articles %}
+				<div class="article-item">
+					<h2 class="article-item__title">{{ article['title'] }}</h2>
+					<p class="article-item__content">
+						{{ article['description'] }}
+					</p>
+					<span class="article-by">Posted By: {{ article['by'] }}</span>
+				</div>
+				{% endfor %}
+			</article>
+		</div>
+	</section>
+</main>
+
+{% include "footer.html" %}
