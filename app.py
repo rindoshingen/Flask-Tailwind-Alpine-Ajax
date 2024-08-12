@@ -3,7 +3,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-articles = [
+ARTICLES = [
     {
         "id": 1,
         "title": "Article One",
@@ -44,7 +44,7 @@ def home():
 
 @app.route("/interest")
 def interest():
-    return render_template("interest.html", articles=articles)
+    return render_template("interest.html", articles=ARTICLES)
 
 
 if __name__ == "__main__":
